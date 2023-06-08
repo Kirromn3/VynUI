@@ -83,7 +83,7 @@ end
 -- Functions
 
 local ScreenGui = SelfModules.UI.Create("ScreenGui", {
-	Name = "Vynixius",
+	Name = "Vynixius UI Library",
 	ZIndexBehavior = Enum.ZIndexBehavior.Sibling,
 })
 
@@ -1070,8 +1070,8 @@ function Library:AddWindow(options)
 				function Toggle:Set(bool, instant)
 					Tab.Flags[Toggle.Flag] = bool
 
-					tween(Toggle.Frame.Holder.Indicator.Overlay, instant and 0 or 0.25, { ImageTransparency = bool and 0 or 1, Position = bool and UDim2.new(1, -24, 0, 2) or UDim2.new(0, 2, 0, 2) })
-					tween(Toggle.Frame.Holder.Indicator.Overlay, "Cosmetic", instant and 0 or 0.25, { BackgroundColor3 = bool and SelfModules.UI.Color.Add(Library.Theme.Accent, Color3.fromRGB(50, 50, 50)) or SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(25, 25, 25)) })
+					tween(Toggle.Frame.Holder.Indicator.Overlay, 0, { ImageTransparency = bool and 0 or 1, Position = bool and UDim2.new(1, -24, 0, 2) or UDim2.new(0, 2, 0, 2) })
+					tween(Toggle.Frame.Holder.Indicator.Overlay, "Cosmetic", 0, { BackgroundColor3 = bool and SelfModules.UI.Color.Add(Library.Theme.Accent, Color3.fromRGB(50, 50, 50)) or SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(25, 25, 25)) })
 				
 					pcall(task.spawn, Toggle.Callback, bool)
 				end
@@ -1475,8 +1475,8 @@ function Library:AddWindow(options)
 					function Bind:Toggle(bool, instant)
 						Tab.Flags[Bind.Flag] = bool
 
-						tween(Bind.Frame.Holder.Indicator.Overlay, instant and 0 or 0.25, { ImageTransparency = bool and 0 or 1, Position = bool and UDim2.new(1, -24, 0, 2) or UDim2.new(0, 2, 0, 2) })
-						tween(Bind.Frame.Holder.Indicator.Overlay, "Cosmetic", instant and 0 or 0.25, { BackgroundColor3 = bool and SelfModules.UI.Color.Add(Library.Theme.Accent, Color3.fromRGB(50, 50, 50)) or SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(25, 25, 25)) })
+						tween(Bind.Frame.Holder.Indicator.Overlay, 0, { ImageTransparency = bool and 0 or 1, Position = bool and UDim2.new(1, -24, 0, 2) or UDim2.new(0, 2, 0, 2) })
+						tween(Bind.Frame.Holder.Indicator.Overlay, "Cosmetic", 0, { BackgroundColor3 = bool and SelfModules.UI.Color.Add(Library.Theme.Accent, Color3.fromRGB(50, 50, 50)) or SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(25, 25, 25)) })
 
 						if options.fireontoggle ~= false then
 							pcall(task.spawn, Bind.Callback, Bind.Bind)
@@ -1670,8 +1670,8 @@ function Library:AddWindow(options)
 					function Slider:Toggle(bool, instant)
 						Tab.Flags[Slider.Flag] = bool
 
-						tween(Slider.Frame.Holder.Indicator.Overlay, instant and 0 or 0.25, { ImageTransparency = bool and 0 or 1, Position = bool and UDim2.new(1, -24, 0, 2) or UDim2.new(0, 2, 0, 2) })
-						tween(Slider.Frame.Holder.Indicator.Overlay, "Cosmetic", instant and 0 or 0.25, { BackgroundColor3 = bool and SelfModules.UI.Color.Add(Library.Theme.Accent, Color3.fromRGB(50, 50, 50)) or SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(25, 25, 25)) })
+						tween(Slider.Frame.Holder.Indicator.Overlay, 0, { ImageTransparency = bool and 0 or 1, Position = bool and UDim2.new(1, -24, 0, 2) or UDim2.new(0, 2, 0, 2) })
+						tween(Slider.Frame.Holder.Indicator.Overlay, "Cosmetic", 0, { BackgroundColor3 = bool and SelfModules.UI.Color.Add(Library.Theme.Accent, Color3.fromRGB(50, 50, 50)) or SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(25, 25, 25)) })
 
 						if options.fireontoggle ~= false then
 							pcall(task.spawn, Slider.Callback, Slider.Value, bool)
@@ -2685,8 +2685,8 @@ function Library:AddWindow(options)
 					function Toggle:Set(bool, instant)
 						Tab.Flags[Toggle.Flag] = bool
 
-						tween(Toggle.Frame.Holder.Indicator.Overlay, instant and 0 or 0.25, { ImageTransparency = bool and 0 or 1, Position = bool and UDim2.new(1, -24, 0, 2) or UDim2.new(0, 2, 0, 2) })
-						tween(Toggle.Frame.Holder.Indicator.Overlay, "Cosmetic", instant and 0 or 0.25, { BackgroundColor3 = bool and SelfModules.UI.Color.Add(Library.Theme.Accent, Color3.fromRGB(50, 50, 50)) or SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(25, 25, 25)) })
+						tween(Toggle.Frame.Holder.Indicator.Overlay, 0, { ImageTransparency = bool and 0 or 1, Position = bool and UDim2.new(1, -24, 0, 2) or UDim2.new(0, 2, 0, 2) })
+						tween(Toggle.Frame.Holder.Indicator.Overlay, "Cosmetic", 0, { BackgroundColor3 = bool and SelfModules.UI.Color.Add(Library.Theme.Accent, Color3.fromRGB(50, 50, 50)) or SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(25, 25, 25)) })
 					
 						pcall(task.spawn, Toggle.Callback, bool)
 					end
@@ -3090,8 +3090,8 @@ function Library:AddWindow(options)
 						function Bind:Toggle(bool, instant)
 							Tab.Flags[Bind.Flag] = bool
 
-							tween(Bind.Frame.Holder.Indicator.Overlay, instant and 0 or 0.25, { ImageTransparency = bool and 0 or 1, Position = bool and UDim2.new(1, -24, 0, 2) or UDim2.new(0, 2, 0, 2) })
-							tween(Bind.Frame.Holder.Indicator.Overlay, "Cosmetic", instant and 0 or 0.25, { BackgroundColor3 = bool and SelfModules.UI.Color.Add(Library.Theme.Accent, Color3.fromRGB(50, 50, 50)) or SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(25, 25, 25)) })
+							tween(Bind.Frame.Holder.Indicator.Overlay, 0, { ImageTransparency = bool and 0 or 1, Position = bool and UDim2.new(1, -24, 0, 2) or UDim2.new(0, 2, 0, 2) })
+							tween(Bind.Frame.Holder.Indicator.Overlay, "Cosmetic", 0, { BackgroundColor3 = bool and SelfModules.UI.Color.Add(Library.Theme.Accent, Color3.fromRGB(50, 50, 50)) or SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(25, 25, 25)) })
 
 							if options.fireontoggle ~= false then
 								pcall(task.spawn, Bind.Callback, Bind.Bind)
@@ -3285,8 +3285,8 @@ function Library:AddWindow(options)
 						function Slider:Toggle(bool, instant)
 							Tab.Flags[Slider.Flag] = bool
 
-							tween(Slider.Frame.Holder.Indicator.Overlay, instant and 0 or 0.25, { ImageTransparency = bool and 0 or 1, Position = bool and UDim2.new(1, -24, 0, 2) or UDim2.new(0, 2, 0, 2) })
-							tween(Slider.Frame.Holder.Indicator.Overlay, "Cosmetic", instant and 0 or 0.25, { BackgroundColor3 = bool and SelfModules.UI.Color.Add(Library.Theme.Accent, Color3.fromRGB(50, 50, 50)) or SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(25, 25, 25)) })
+							tween(Slider.Frame.Holder.Indicator.Overlay, 0, { ImageTransparency = bool and 0 or 1, Position = bool and UDim2.new(1, -24, 0, 2) or UDim2.new(0, 2, 0, 2) })
+							tween(Slider.Frame.Holder.Indicator.Overlay, "Cosmetic", 0, { BackgroundColor3 = bool and SelfModules.UI.Color.Add(Library.Theme.Accent, Color3.fromRGB(50, 50, 50)) or SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(25, 25, 25)) })
 						
 							if options.fireontoggle ~= false then
 								pcall(task.spawn, Slider.Callback, Slider.Value, bool)
